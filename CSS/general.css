@@ -22,9 +22,11 @@ LETTER SPACING
 -primary: #e67e22
 -Tints:#fdf2e9
 #fae5d3
+#45260a;
 -shades:
 -accents: 
 -Greys: #555
+#888
 #333
 #6f6f6f (LIGHTEST GREY)
 
@@ -85,6 +87,9 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
 .grid--center-v {
   align-items: center;
 }
@@ -123,17 +128,22 @@ body {
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
 
   font-size: 2rem;
-  color: #fff;
+  /* color: #fff; */
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
   text-decoration: none;
   transition: all 0.3s;
   font-weight: 600;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -155,6 +165,17 @@ body {
 
   box-shadow: inset 0 0 0 3px #fff;
 }
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+  transition: all 0.4s;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
 
 .list {
   list-style: none;
@@ -162,6 +183,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.507);
 }
 .list-icon {
   width: 3rem;
