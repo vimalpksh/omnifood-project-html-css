@@ -195,7 +195,7 @@ body {
 }
 .list-item {
   font-size: 1.8rem;
-
+  line-height: 1.2rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
