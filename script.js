@@ -3,6 +3,8 @@ const h1 = document.querySelector(".heading-primary");
 const myName = "Vimal Prakash";
 const yearEl = document.querySelector(".year");
 const currYear = new Date().getFullYear();
+const btnEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
 
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
@@ -25,10 +27,17 @@ checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
-h1.addEventListener("click", function () {
-  h1.textContent = myName;
-  h1.style.backgroundColor = "red";
-  h1.style.padding = "5rem";
-});
+// h1.addEventListener("click", function () {
+//   h1.textContent = myName;
+//   h1.style.backgroundColor = "red";
+//   h1.style.padding = "5rem";
+// });
 
+//set current year
 yearEl.textContent = currYear;
+
+//mobile navigation
+
+btnEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
