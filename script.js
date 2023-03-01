@@ -41,3 +41,30 @@ yearEl.textContent = currYear;
 btnEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
+
+//Smooth scrolling
+
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const hrefEl = link.getAttribute("href");
+
+    //scroll back to top
+    if (hrefEl === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    if (hrefEl !== "#" && hrefEl.startsWith("#")) {
+      const secEl = document.querySelectorAll(hrefEl);
+      secEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    //close navigation
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  });
+});
