@@ -112,7 +112,9 @@ instead , 1rem = 1em = 16px */
   }
 
   .main-nav {
-    background-color: rgb(211, 208, 208);
+    background-color: rgb(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blue(5px);
+    backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     left: 0;
